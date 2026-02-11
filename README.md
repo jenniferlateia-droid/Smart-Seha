@@ -20,8 +20,5 @@
 5. نفّذ: `php artisan migrate`
 6. شغّل المشروع: `php artisan serve`
 
-## لقطات الشاشة
-(أضف صور من المشروع)
-
 ## الترخيص
 MIT License
