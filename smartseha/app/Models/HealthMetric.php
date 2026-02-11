@@ -1,0 +1,39 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
+
+class HealthMetric extends Model
+{
+    protected $fillable = [
+        'user_id',
+        'weight',
+        'systolic',
+        'diastolic',
+        'blood_sugar',
+        'steps',
+        'water_intake_liters',
+        'sleep_hours',
+        'exercise_minutes',
+        'mood_score',
+        'recorded_date',
+    ];
+
+    protected function casts(): array
+    {
+        return [
+            'recorded_date' => 'date',
+            'weight' => 'float',
+            'blood_sugar' => 'float',
+            'water_intake_liters' => 'float',
+            'sleep_hours' => 'float',
+        ];
+    }
+
+    public function user(): BelongsTo
+    {
+        return $this->belongsTo(User::class);
+    }
+}

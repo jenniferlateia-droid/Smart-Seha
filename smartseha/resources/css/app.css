@@ -1,0 +1,95 @@
+@import 'tailwindcss';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../**/*.blade.php';
+@source '../**/*.js';
+
+:root {
+    --primary: #2a9d8f;
+    --primary-light: #38b2a3;
+    --primary-dark: #1f7169;
+    --accent: #f4a261;
+    --dark: #0f1722;
+    --bg-start: #0b1220;
+    --bg-end: #164f4b;
+    --light-bg: #f0f4f8;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Cairo', ui-sans-serif, system-ui, sans-serif;
+}
+
+.auth-body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, var(--bg-start), var(--bg-end));
+}
+
+.app-body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, var(--light-bg), #e8eef5);
+    color: var(--dark);
+}
+
+.auth-main {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.25rem;
+}
+
+.app-main {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1200px;
+    padding: 1.25rem;
+}
+
+.glass-card {
+    background: #ffffff;
+    border-radius: 1.2rem;
+    box-shadow: 0 14px 34px rgba(2, 6, 23, 0.12);
+}
+
+.form-input {
+    width: 100%;
+    border: 1.5px solid #d5dbe1;
+    border-radius: 0.8rem;
+    padding: 0.7rem 0.9rem;
+    background: #fff;
+    transition: all 0.2s ease;
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 4px rgba(42, 157, 143, 0.14);
+}
+
+.primary-btn {
+    background: linear-gradient(90deg, var(--primary), var(--primary-light));
+    color: #fff;
+    border: none;
+    border-radius: 0.8rem;
+    padding: 0.75rem 1rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.primary-btn:hover {
+    filter: brightness(0.98);
+}
+
+.page-title {
+    font-size: 2rem;
+    font-weight: 900;
+    color: var(--dark);
+}
